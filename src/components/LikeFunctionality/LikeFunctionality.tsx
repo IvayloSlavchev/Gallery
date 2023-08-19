@@ -6,13 +6,13 @@ const LikeFunctionality = () => {
     const [hasUserLikedImage, setHasUserLikedImage] = useState<boolean>(false);
 
     function likeImageFunction() {
-        if (hasUserLikedImage === false) return setLikes(oldCountOfLikes => oldCountOfLikes + 1);
-
-        if (hasUserLikedImage === true) return setLikes(oldCountOfLikes => oldCountOfLikes - 1);
+        if(hasUserLikedImage === false) return setLikes(oldCountOfLikes => oldCountOfLikes + 1);
+        
+        return setLikes(oldCountOfLikes => oldCountOfLikes - 1);
     }
 
     return (
-        <div>
+        <div className='like-button-root'>
             <button
                 style={{ backgroundColor: hasUserLikedImage ? 'lightblue' : 'white' }}
                 onClick={() => {
@@ -20,7 +20,7 @@ const LikeFunctionality = () => {
                     setHasUserLikedImage(!hasUserLikedImage);
                 }}
                 className="like-button"
-            >Like: {likes}</button>
+            >Likes: {likes}</button>
         </div>
     )
 }

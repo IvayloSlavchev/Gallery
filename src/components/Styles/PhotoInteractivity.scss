@@ -8,10 +8,11 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 4px;
         
+        .images {
+            max-width: 100%;
+            cursor: pointer;
+        }   
         .image-wrapper {
-            .images {
-                max-width: 100%;
-            }   
         }
     }
 
@@ -22,6 +23,26 @@
         gap: 15px;
 
         .images {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    .individual-image-class, .individual-image-mobile {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+        .choosen-image {
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            max-width: 50%;
+        }
+    }
+
+    .individual-image-mobile {
+        .choosen-image {
             max-width: 100%;
         }
     }

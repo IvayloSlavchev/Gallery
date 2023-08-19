@@ -1,9 +1,15 @@
-.like-button {
-    padding: .3rem;
+.like-button-root {
+    width: 100%;
+    display: grid;
     max-width: 100%;
 
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    cursor: pointer;
+    .like-button {
+        padding: .3rem;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 16px;
+    }
 }
